@@ -13,29 +13,42 @@
 
 def pair_up(items):
 
-    # paired = []
-    # result = []
 
-    if items:
+    pairs = []
+    pair0 = items[::2]  # all even elements (odd numbers)   # not specified start or end value = entire list; [::2] = stepping by 2
+    pair1 = items[1::2]  # all odd elements (even numbers)
 
-        # while len(paired) < 2:
-        #     for i in items:
-        #         paired.append(i)
-        #     result.append(paired)
-        #     paired = []
+    for idx in range(len(pair1)):  # all odd elements, so will only loop for pairs
+        pairs.append([pair0[idx], pair1[idx]])
+    return pairs
 
-        result = [items[i:i+2] for i in range(0,len(items),2)]
 
-        last = result[-1]
-        if len(last) == 1:
-            result.pop()
+result = pair_up([1,2,3,4,5,6,7])
+print(result)
 
-        return result
+#     # paired = []
+#     # result = []
 
-    return []
+#     if items:
 
-# def pair_up(items):
-#     return [[items[i], items[i+1]] for i in range(len(items)-1)][0::2]
+#         # while len(paired) < 2:
+#         #     for i in items:
+#         #         paired.append(i)
+#         #     result.append(paired)
+#         #     paired = []
+
+#         result = [items[i:i+2] for i in range(0,len(items),2)]
+
+#         last = result[-1]
+#         if len(last) == 1:
+#             result.pop()
+
+#         return result
+
+#     return []
+
+# # def pair_up(items):
+# #     return [[items[i], items[i+1]] for i in range(len(items)-1)][0::2]
 
 
 print(pair_up([1,2,3,4,5,6,7]))

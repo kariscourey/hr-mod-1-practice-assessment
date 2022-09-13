@@ -31,8 +31,18 @@
 #     return "".join(sneaky)
 
 
+# def shift_cipher(message, shift):
+#     return "".join(chr(ord(i) + shift) for i in message)
+
+
 def shift_cipher(message, shift):
-    return "".join(chr(ord(i) + shift) for i in message)
+    secret_message = ""
+    for index in range(len(message)):
+        char = message[index]
+        ascii = ord(char)
+        secret_message += chr(ascii + shift)
+        return secret_message
+
 
 
 print(shift_cipher("abcdef", 1))

@@ -16,8 +16,9 @@ invoices = [
     Invoice("Raul", 25.00, datetime(2010, 4, 15)),
     Invoice("Poli", 50.00, datetime(2029, 11, 5)),
     Invoice("Don", 75.00, datetime(2012, 7, 21)),
-    Invoice("Anne", 100.00, datetime(2035, 6, 17))
+    Invoice("Anne", 100.00, datetime(2035, 6, 17)),
+    Invoice("Karl", 362.00, datetime(2022, 6, 17)),
 ]
 
-result = amount_due(invoices, 90)
+result = amount_due(invoices, 90)  # this overrides fn default
 print(result)

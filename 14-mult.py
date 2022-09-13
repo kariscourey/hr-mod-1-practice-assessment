@@ -32,6 +32,11 @@
 def is_multiple_of(number, base):
     return (isinstance(base, int)) and (number % base == 0)
 
+    # if int(number) != number or int(base) != base:  # checks both args for int
+    #     return False
+    # return number % base == 0
+
 
 print(is_multiple_of(6,2))
 print(is_multiple_of(6,1.5))
+print(is_multiple_of(6,6))

@@ -6,5 +6,6 @@
 
 def last_item(list):
     if list:
-        last_item = list[len(list) - 1]
+        # last_item = list[len(list) - 1]
+        last_item = list[-1]
         return last_item

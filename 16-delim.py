@@ -15,3 +15,7 @@ def read_delimited(line, separator=","):
         return line.split(separator)
 
     return [""]
+
+
+result = read_delimited("1,2,3,4")
+print(result)

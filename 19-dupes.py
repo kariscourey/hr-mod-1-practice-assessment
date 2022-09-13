@@ -12,9 +12,18 @@
 
 def unique_elements(items):
 
-    output = []
+    # output = []
 
+    # for i in items:
+    #     if i not in output:
+    #         output.append(i)
+    # return output
+
+    uniques = {}
     for i in items:
-        if i not in output:
-            output.append(i)
-    return output
+        uniques[i] = 1
+    return list(uniques.keys())
+
+
+result = unique_elements([1,1,1,2,3,4,4,5])
+print(result)
